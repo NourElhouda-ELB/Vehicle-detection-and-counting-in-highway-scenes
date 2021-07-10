@@ -57,7 +57,7 @@ flags.DEFINE_float('score', 0.50, 'score threshold')
 flags.DEFINE_boolean('dont_show', False, 'dont show video output')
 flags.DEFINE_boolean('info', False, 'show detailed info of tracked objects')
 flags.DEFINE_boolean('count', False, 'count objects being tracked on screen')
-flags.DEFINE_string('output_data', False, 'path to output data')
+flags.DEFINE_boolean('output_data', False, 'path to output data')
 
 # Return true if line segments AB and CD intersect
 def intersect(A,B,C,D):
