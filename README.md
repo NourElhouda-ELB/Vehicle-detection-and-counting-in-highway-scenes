@@ -57,6 +57,11 @@ Par défaut, le code est configuré pour détecter et suivre les 80 classes disp
 
 Pour filtrer une sélection personnalisée de classes, il vous suffit de commenter la ligne 221 et de décommenter la ligne 224 de [object_tracker.py] Dans la liste ``allowed_classes``, ajoutez simplement les classes que vous souhaitez que le tracker suive. Les classes peuvent être n'importe laquelle des 80 sur lesquelles le modèle est entraîné, voyez quelles classes vous pouvez suivre dans le fichier [data/classes/coco.names]
 
+## Personnaliser les zones de comptage
+Vous pouvez changer les paramètres des lignes à tracer et des zones dont le calcul des véhicules sera pris en considération en modifiant les paramètres des lignes (144,145,146,147) du fichier 
+[object_tracker.py]. Nous pouvons ajouter d'autres zones et d'autres forme sans jamais oublier de les ajouter au niveau des conditions d'intersection commençant à partir de la ligne 321 du fichier 
+[object_tracker.py].
+
 ## Référence des arguments de ligne de commande
 
 ```bash
