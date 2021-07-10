@@ -1,5 +1,5 @@
 # yolov4-deepsort-tensorflow-for-counting-vehicles-in-4-zones
-[![Open In Colab](https://colab.research.google.com/drive/1tSDUSZP5Gh2Pe355j-cACTQjbHfaLmE2?usp=sharing)
+[Open In Colab](https://colab.research.google.com/drive/1tSDUSZP5Gh2Pe355j-cACTQjbHfaLmE2?usp=sharing)
 
 Suivi d'objets implémenté avec YOLOv4, DeepSort et TensorFlow. YOLOv4 est un algorithme de pointe qui utilise des réseaux de neurones convolutifs profonds pour effectuer des détections d'objets. Nous pouvons utiliser la sortie de YOLOv4, c'est-à-dire, les détections pour alimenter ces détections d'objets dans Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) afin de créer un modèle capable de compter les véhicules à partir des vidéos d'une manière très précise.
 
