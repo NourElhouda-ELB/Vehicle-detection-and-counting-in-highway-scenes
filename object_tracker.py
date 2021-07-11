@@ -351,8 +351,10 @@ def main(_argv):
         # counter += 1      
         # calculate frames per second of running detections
         fps = 1.0 / (time.time() - start_time)
+        elap = (time.time() - start_time)
         moyenne_fps = moyenne_fps + fps
         print("FPS: %.2f" % fps)
+        # Show count
         print("Nombre total de véhicules: %d" % counter_OUT)
         print("Nombre total de véhicules dans la zone jawaz: %d" % counter_JAWAZ)
         print("Nombre total de véhicules dans la zone manuelle: %d" % counter_MANUEL)
@@ -387,6 +389,14 @@ def main(_argv):
         writer = pd.ExcelWriter(time.strftime('%y-%m-%d-%H:%M:%S.xlsx'))
         df.to_excel(writer,'Sheet2')
         writer.save()
+
+    # some information on processing single frame
+    print("\n-----------------------------------------------------------------------------------------------------------")
+    print("[INFO] Estimated time taken to process single frame: {:.4f} seconds".format(elap))
+    print("\n[INFO] Estimated total time to finish object detection: {:.4f} minutes".format((elap * frame_num)/60))
+    print("------------------------------------------------------------------------------------------------------------")
+   
+    # Calculate FPS mean()   
     moyenne_fps_frames = moyenne_fps / frame_num  
     print("La moyenne FPS: %.2f" % moyenne_fps_frames)
 if __name__ == '__main__':
