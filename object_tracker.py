@@ -151,6 +151,7 @@ def main(_argv):
     counter_OUT = 0
     counter_JAWAZ = 0
     counter_MANUEL = 0
+    moyenne_fps = 0
 
     # while video is running
     while True:
@@ -352,6 +353,9 @@ def main(_argv):
         fps = 1.0 / (time.time() - start_time)
         moyenne_fps = moyenne_fps + fps
         print("FPS: %.2f" % fps)
+        print("Nombre total de véhicules: %d" % counter_OUT)
+        print("Nombre total de véhicules dans la zone jawaz: %d" % counter_JAWAZ)
+        print("Nombre total de véhicules dans la zone manuelle: %d" % counter_MANUEL)
         result = np.asarray(frame)
         result = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
         
