@@ -350,6 +350,7 @@ def main(_argv):
         # counter += 1      
         # calculate frames per second of running detections
         fps = 1.0 / (time.time() - start_time)
+        moyenne_fps = moyenne_fps + fps
         print("FPS: %.2f" % fps)
         result = np.asarray(frame)
         result = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
@@ -382,7 +383,8 @@ def main(_argv):
         writer = pd.ExcelWriter(time.strftime('%y-%m-%d-%H:%M:%S.xlsx'))
         df.to_excel(writer,'Sheet2')
         writer.save()
-
+    moyenne_fps_frames = moyenne_fps / frame_num  
+    print("La moyenne FPS: %.2f" % moyenne_fps_frames)
 if __name__ == '__main__':
     try:
         app.run(main)
