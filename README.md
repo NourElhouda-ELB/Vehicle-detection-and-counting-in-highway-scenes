@@ -81,9 +81,9 @@ save_model.py:
     (default: yolov4)
     
  object_tracker.py:
-  --video: path to input video (use 0 for webcam)
+  --video: path to input video
     (default: './data/video/test.mp4')
-  --output: path to output video (remember to set right codec for given format. e.g. XVID for .avi)
+  --output: path to output video 
     (default: None)
   --output_format: codec used in VideoWriter when saving video to file
     (default: 'XVID)
