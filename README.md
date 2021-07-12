@@ -6,7 +6,7 @@ Suivi d'objets implémenté avec YOLOv4, DeepSort et TensorFlow. YOLOv4 est un a
 ## détection et comptage à partir d'une vidéo
 <p align="center"><img src="data/helpers/demo.PNG"\></p>
 
-## Pour comencer le projet
+## Pour commencer le projet
 Pour commencer, installez les dépendances appropriées via Anaconda ou Pip. 
 
 ### Pip
