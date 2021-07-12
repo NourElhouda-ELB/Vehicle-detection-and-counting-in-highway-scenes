@@ -77,8 +77,6 @@ save_model.py:
     (default: 'False')
   --input_size: définir la taille du input du modèle d exportation
     (default: 416)
-  --framework: Quel framework à utiliser (tf, trt, tflite)
-    (default: tf)
   --model: yolov3 ou yolov4
     (default: yolov4)
     
@@ -107,11 +105,9 @@ save_model.py:
     (default: False)
   --info: print detailed info about tracked objects
     (default: False)
-  --info: print detailed info about tracked objects
-    (default: False)
   --count: count number of vehicles tracked per frame
     (default: False)
-  --info: extract counting data in a Excel folder
+  --output_data: extract counting data in a Excel folder
     (default: False)
 ```
 
