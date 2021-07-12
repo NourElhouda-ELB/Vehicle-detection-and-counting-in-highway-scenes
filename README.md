@@ -28,7 +28,7 @@ Copiez et collez yolov4.weights de votre dossier de téléchargements dans le do
 
 Si vous souhaitez utiliser yolov4-tiny.weights, un modèle plus petit qui est plus rapide pour exécuter les détections mais moins précis, téléchargez le fichier ici : https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
 
-## Running the Tracker with YOLOv4
+## Exécuter notre Détecteur-traqueur avec YOLOv4
 Pour implémenter le suivi d'objet à l'aide de YOLOv4, nous convertissons d'abord les poids dans le modèle TensorFlow correspondant qui sera enregistré dans un dossier checkpoints. Ensuite, tout ce que nous avons à faire est d'exécuter le script object_tracker.py pour exécuter notre calcul d'objets avec YOLOv4, DeepSort et TensorFlow.
 
 ```bash
@@ -39,7 +39,7 @@ python save_model.py --model yolov4
 python object_tracker.py --video ./data/video/27-06-2021_3.mkv --output ./outputs/demo.avi --model yolov4 --count --output_data ./outputs/sheet1.xlsx
 
 ```
-Le Flag output nous permet d'enregistrer la vidéo résultante du suivi d'objet en cours d'exécution afin que nous puissions la revoir plus tard. La vidéo sera enregistrée dans le chemin que nous avons défini. (le dossier 'outputs' est l'endroit où il se trouvera si nous exécutons la commande ci-dessus!)
+Le Flag 'output' nous permet d'enregistrer la vidéo résultante du suivi d'objet en cours d'exécution afin que nous puissions la revoir plus tard. La vidéo sera enregistrée dans le chemin que nous avons défini. (le dossier 'outputs' est l'endroit où il se trouvera si nous exécutons la commande ci-dessus!)
 
 ## Exécuter le Tracker avec YOLOv4-Tiny
 Les commandes suivantes vous permettront d'exécuter le modèle yolov4-tiny. Yolov4-tiny vous permet d'obtenir une vitesse plus élevée (FPS) pour le tracker à un léger coût de précision. 
